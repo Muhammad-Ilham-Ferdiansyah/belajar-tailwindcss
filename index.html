@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                        13: '3.25rem',
+                    },
+                    fontFamily: {
+                        inter: ['Inter']
+                    },
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                        'goyang': 'goyang 1s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        goyang: {
+                            '0%, 100%': {transform: 'rotate(-3deg)'},
+                            '50%': { transform: 'rotate(3deg)'},
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Belajar TailwindCSS</title>
+    <style type="text/tailwindcss">
+        #toggle:checked ~ label div.toggle-circle {
+            @apply translate-x-3;
+        }
+    </style>
+</head>
+
+<body class="dark:bg-slate-800 dark:text-slate-100">
+    <h1
+        class="text-6xl font-bold text-center my-10 bg-gradient-to-br from-orange-500 to-yellow-400 bg-clip-text text-transparent">
+        Mari belajar <span
+            class="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">TailwindCSS</span></h1>
+
+    <section class="mb-10 bg-gradient-to-tr from-blue-900 via-green-400 to-blue-300 rounded-xl">
+        <h2 class="text-3xl text-center font-black">Spacing</h2>
+        <div class="m-13">Margin</div>
+        <div class="py-5">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-yellow-300">
+        <h2 class="text-3xl text-center font-black">Sizing</h2>
+        <div class="w-32 h-32 bg-purple-300">Kotak 1</div>
+    </section>
+
+    <section class="font-inter max-w-3xl mx-auto">
+        <h2 class="mb-2 text-4xl font-bold">Belajar Mengenal Typography pada TailwindCSS</h2>
+        <div class="mb-4 text-lg text-gray-500">By.<a href="#" class="text-gray-700 font-semibold">
+                Muhammad Ilham</a>, 4 Februari 2022
+        </div>
+        <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla <a href="#"
+                class="underline font-semibold text-blue-500">consequatur</a> quae beatae quisquam
+            esse accusamus explicabo placeat molestias, in eos non maxime quaerat eligendi laborum obcaecati odit
+            reprehenderit tempora voluptates temporibus iste vel ab. Cum ducimus laudantium iure facilis natus
+            accusantium porro dolore fugiat reprehenderit assumenda ad explicabo, vitae illum?</p>
+        <blockquote class="mb-4 italic font-thin text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Veniam delectus necessitatibus aut
+            ipsum corporis molestiae recusandae ullam laudantium repudiandae deserunt?"</blockquote>
+        <p class="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam nemo repellat laboriosam nobis
+            dicta incidunt optio eaque modi, autem non rerum vel, quis possimus, rem explicabo numquam tempore suscipit+
+            excepturi.</p>
+    </section>
+    <div class="max-w-xl h-96 bg-slate-300 mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+        style="background-image: url('https://source.unsplash.com/1000x600')">
+        <p class="p-5 text-2xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius distinctio ad vel laborum
+            libero, veritatis qui nam, esse atque ex nesciunt repellat facilis minus. Ab odit libero aliquid sed. Sint
+            doloribus dicta at fugit libero aliquid veniam fugiat expedita. Harum cum libero quos officia pariatur illum
+            atque omnis, ipsa aspernatur iusto natus esse reprehenderit deleniti autem corporis commodi earum dolores
+            eius aperiam eum minus. Debitis fugit excepturi fugiat error aut tempora, non dolor iste modi at, impedit
+            mollitia temporibus qui omnis velit minima hic fuga nostrum totam, pariatur veniam. Consequuntur delectus
+            mollitia deleniti libero? Mollitia ut excepturi vitae aliquid odit praesentium nihil. Quo voluptate est
+            corrupti maxime veritatis commodi autem debitis ex, neque nam rem itaque corporis quis unde tempore at,
+            odit, asperiores obcaecati mollitia doloremque explicabo veniam praesentium? Ea ullam ex architecto
+            laboriosam laborum at autem deleniti! Consequuntur amet animi at voluptates illo error, voluptas obcaecati
+            quis cum laboriosam. Nisi rem enim expedita officiis, nesciunt impedit dolores nulla earum commodi
+            praesentium hic necessitatibus reiciendis veniam laboriosam optio aliquid amet inventore aut. Necessitatibus
+            nisi ullam sunt iure voluptate itaque quaerat provident, facilis at exercitationem commodi! Debitis
+            veritatis quos quae consequuntur? Illum veritatis earum optio cum officia aspernatur repellat laboriosam
+            labore?</p>
+    </div>
+    <div class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl shadow-xl shadow-slate-500 overflow-hidden border-8 brightness-105 flex"
+        style="background-image: url('./1.png');">
+        <!-- <div class="w-full h-full bg-blue-700 mix-blend-overlay">
+            
+        </div> -->
+        <div class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md rounded-2xl flex">
+            <p class="font-bold p-6 m-auto ">Hello, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem,
+                nemo?</p>
+        </div>
+    </div>
+
+    <hr class="my-20">
+
+    <div class="flex justify-center">
+        <span class="text-sm text-slate-500 mr-2">Light</span>
+        <input type="checkbox" id="toggle" class="hidden">
+        <label for="toggle">
+            <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer">
+                <div class="w-4 h-4 bg-cyan-300 rounded-full toggle-circle"></div>
+            </div>
+        </label>
+        <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button
+        class="my-10 bg-violet-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-violet-600 active:bg-violet-700 focus:ring focus:ring-violet-400 dark:bg-slate-400 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100">Save
+        Changes</button>
+
+    <div
+        class="max-w-lg my-10 border border-slate-300 rounded-xl mx-auto p-5 shadow-md hover:bg-violet-500 group font-serif dark:hover:bg-slate-300">
+        <h5 class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800">My Card</h5>
+        <p
+            class="text-slate-600 group-hover:text-white selection:bg-yellow-400 selection:text-slate-600 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3
+            dark:group-hover:text-slate-800">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quos voluptate ea in rerum dolor, deserunt
+            illum facilis neque temporibus porro. Dolores accusamus consequuntur corrupti qui sint voluptatibus velit
+            voluptas!</p>
+    </div>
+
+    <div class="max-w-lg border border-slate-200 mx-auto shadow-md p-5 rounded-xl font-inter">
+        <form action="">
+            <label for="email">
+                <span class="block font-semibold mb-1 text-slate-600 after:content-['*'] after:text-red-700 after:ml-0.5">Email</span>
+                <input type="email" id="email "placeholder="masukkan email.."
+                    class="px-3 py-2 border shadow-md rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-violet-500 focus:border-violet-500
+                    invalid:text-red-600 invalid:focus:ring-red-600
+                    invalid:focus:border-red-600 peer">
+                    <p class="text-sm m-1 text-red-600 invisible peer-invalid:visible">Email tidak valid</p>
+            </label>
+        </form>
+    </div>
+
+    <hr class="my-20"/>
+
+
+    <div class="w-40 h-40 bg-violet-500 mx-auto rounded-lg shadow-lg hover:scale-125 hover:rotate-45 hover:translate-x-16 hover:bg-red-700 transition origin-top-left"></div>
+
+    <div class="w-40 h-40 mx-auto mt-20 group">
+        <div class="w-full h-full bg-red-300 rounded-lg shadow-lg group-hover:rotate-180 origin-top-left transition ease-in duration-1000 group-hover:bg-red-700"></div>
+    </div>
+
+    <div class="w-40 h-40 bg-green-500 mx-auto rounded-lg shadow-lg mt-20 animate-goyang"></div>
+
+    <div class="mb-96"></div>
+    <script>
+        const checkbox = document.querySelector('#toggle');
+        const html = document.querySelector('html');
+
+        checkbox.addEventListener('click', function (){
+            checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        });
+    </script>
+</body>
+
+</html>
